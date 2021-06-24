@@ -18,7 +18,9 @@ class _StatusPageState extends State<StatusPage> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Container(
+            height: 48,
             child: FloatingActionButton(
+              elevation: 8,
               backgroundColor: Colors.blueGrey[100],
               onPressed: () {},
               child: Icon(Icons.edit, color: Colors.blueGrey[900]),
@@ -47,12 +49,14 @@ class _StatusPageState extends State<StatusPage> {
               name: 'Habib',
               image: "assets/bg_black.jpg",
               time: '12:34',
+              statusNum: 2,
             ),
             label('Viewd updates'),
             OthersStatus(
               name: 'Habib',
               image: "assets/bg_black.jpg",
               time: '12:34',
+              statusNum: 3,
             ),
           ],
         ),

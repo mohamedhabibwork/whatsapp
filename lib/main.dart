@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp/screens/CameraScreen.dart';
 import 'package:whatsapp/screens/LoginScreen.dart';
 
+import 'NewScreen/LandingScreen.dart';
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   cameras = await availableCameras();
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
           // ignore: deprecated_member_use
           accentColor: const Color(0xFF128C7E),
           fontFamily: 'OpenSans'),
-      home: LoginScreen(),
+      home: LandingScreen(),
     );
   }
 }

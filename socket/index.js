@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000;
 const HOST_NAME = process.env.HOST_NAME || "0.0.0.0";
 const server = http.createServer(app);
 const io = require('socket.io')(server);
-const chats = require("./Chats");
+// const chats = require("./Chats");
 const clients = require("./Clients");
 
 app.use(express.json());
@@ -64,6 +64,11 @@ io.on('connection', (socket) => {
     })
 });
 
+app.route('/check').get(((req, res) => {
+    return res.json({
+        message:"Your App Working successfully",
+    })
+}))
 server.listen(PORT, HOST_NAME, () => {
     console.log(`http://${HOST_NAME}:${PORT}`)
 });
